@@ -15,7 +15,7 @@ class App extends Component {
         return (
             <>
                 {JSON.stringify(this.state.payload)}
-                <table>
+                <table style={{margin: '0 auto', marginTop: '4rem'}}>
                     <tr>
                         <td>
                             <label htmlFor="">BDS DOC NO</label>
@@ -23,15 +23,18 @@ class App extends Component {
                         <td>
                             <input type="text" onChange={(v) => {
                                 this.setState({payload: {...this.state.payload, bdsDocNo: v.target.value}})
-                            }}/>
+                            }} disabled={true}/>
                         </td>
                         <td>
                             <label htmlFor="">Bank Name</label>
                         </td>
                         <td>
-                            <input type="text" onChange={(v) => {
+                            <select name="bankName" id="" onChange={(v) => {
                                 this.setState({payload: {...this.state.payload, bankName: v.target.value}})
-                            }}/>
+                            }}>
+                                <option value="BCA">BCA</option>
+                                <option value="MANDIRI">MANDIRI</option>
+                            </select>
                         </td>
                     </tr>
                     <tr>
@@ -41,17 +44,17 @@ class App extends Component {
                         <td>
                             <input type="text" onChange={(v) => {
                                 this.setState({payload: {...this.state.payload, bdsDocDate: v.target.value}})
-                            }}/>
+                            }} disabled={true}/>
                         </td>
                         <td>
                             <label htmlFor="">Bank Account</label>
                         </td>
                         <td>
-                            <select name="bankName" id="" onChange={(v) => {
+                            <select name="bankAccount" id="" onChange={(v) => {
                                 this.setState({payload: {...this.state.payload, bankAccount: v.target.value}})
                             }}>
-                                <option value="BCA">BCA</option>
-                                <option value="MANDIRI">MANDIRI</option>
+                                <option value="BCA">12222</option>
+                                <option value="MANDIRI">12223</option>
                             </select>
                         </td>
                     </tr>
@@ -62,7 +65,7 @@ class App extends Component {
                         <td>
                             <input type="text" onChange={(v) => {
                                 this.setState({payload: {...this.state.payload, supplier: v.target.value}})
-                            }}/>
+                            }} disabled={true}/>
                         </td>
                         <td>
                             <label htmlFor="">Bank Account Name</label>
@@ -70,7 +73,7 @@ class App extends Component {
                         <td>
                             <input type="text" onChange={(v) => {
                                 this.setState({payload: {...this.state.payload, bankAccountName: v.target.value}})
-                            }}/>
+                            }} disabled={true}/>
                         </td>
                     </tr>
                     <tr>
@@ -80,7 +83,7 @@ class App extends Component {
                         <td>
                             <input type="text" onChange={(v) => {
                                 this.setState({payload: {...this.state.payload, supplierTaxId: v.target.value}})
-                            }}/>
+                            }} disabled={true}/>
                         </td>
                         <td>
                             <label htmlFor="">Support Doc</label>
@@ -96,9 +99,11 @@ class App extends Component {
                             <label htmlFor="">Transaction Type</label>
                         </td>
                         <td>
-                            <input type="text" onChange={(v) => {
+                            <select name="trType" id="" onChange={(v) => {
                                 this.setState({payload: {...this.state.payload, transactionType: v.target.value}})
-                            }}/>
+                            }} disabled={true}>
+                                <option>Other</option>
+                            </select>
                         </td>
                         <td>
                             <label htmlFor="">Payment Plan Date</label>
@@ -106,7 +111,7 @@ class App extends Component {
                         <td>
                             <input type="date" onChange={(v) => {
                                 this.setState({payload: {...this.state.payload, paymentPlanDate: v.target.value}})
-                            }}/>
+                            }} disabled={true}/>
                         </td>
                     </tr>
                     <tr>
@@ -117,7 +122,7 @@ class App extends Component {
                         <td>
                             <input type="date" onChange={(v) => {
                                 this.setState({payload: {...this.state.payload, paidDate: v.target.value}})
-                            }}/>
+                            }} disabled={true}/>
                         </td>
                     </tr>
                 </table>
