@@ -125,67 +125,157 @@ class App extends Component {
         )
     }
 
-    table = () => {
+    tableInvoice = () => {
         return (
-            <>
-                <div style={{width: '100vw', overflowX: 'scroll'}}>
-                    <table>
-                        <tr>
-                            <td colSpan={11}>
-                                <h1>Invoice List</h1>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Invoice Doc</td>
-                            <td>Invoice Date</td>
-                            <td>Top</td>
-                            <td>Invoice Due Date</td>
-                            <td>Faktur Pajak No</td>
-                            <td>PPN Rate</td>
-                            <td>Desc</td>
-                            <td>Grand Total</td>
-                            <td>Before Tax</td>
-                            <td>PPH Prepaid</td>
-                            <td>Grand Total After Tax</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="text" disabled={true}/>
-                            </td>
-                            <td>
-                                <input type="date" disabled={false}/>
-                            </td>
-                            <td>
-                                <input type="text" disabled={false}/>
-                            </td>
-                            <td>
-                                <input type="text" disabled={true}/>
-                            </td>
-                            <td>
-                                <input type="text" disabled={false}/>
-                            </td>
-                            <td>
-                                <input type="text" disabled={false}/>
-                            </td>
-                            <td>
-                                <input type="text" disabled={false}/>
-                            </td>
-                            <td>
-                                <input type="text" disabled={false}/>
-                            </td>
-                            <td>
-                                <input type="text" disabled={true}/>
-                            </td>
-                            <td>
-                                <input type="text" disabled={false}/>
-                            </td>
-                            <td>
-                                <input type="text" disabled={true}/>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </>
+            <div style={{
+                width: '100vw',
+                overflowX: 'scroll',
+                textAlign: 'center',
+                alignContent: 'center',
+                justifyItems: 'center',
+            }}>
+                <table style={{
+                    borderCollapse: 'collapse',
+                    border: '1px solid black',
+                    alignContent: 'center',
+                    justifySelf: 'center',
+                    justifyContent: 'center',
+                    textAlign: 'center',
+                    margin: '0 auto',
+                    marginTop: '8rem'
+                }}>
+                    <tr>
+                        <td colSpan={11}>
+                            <h1>Invoice List</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Invoice Doc</td>
+                        <td>Invoice Date</td>
+                        <td>Top</td>
+                        <td>Invoice Due Date</td>
+                        <td>Faktur Pajak No</td>
+                        <td>PPN Rate</td>
+                        <td>Desc</td>
+                        <td>Grand Total</td>
+                        <td>Before Tax</td>
+                        <td>PPH Prepaid</td>
+                        <td>Grand Total After Tax</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" disabled={true}/>
+                        </td>
+                        <td>
+                            <input type="date" disabled={false}/>
+                        </td>
+                        <td>
+                            <input type="text" disabled={false}/>
+                        </td>
+                        <td>
+                            <input type="text" disabled={true}/>
+                        </td>
+                        <td>
+                            <input type="text" disabled={false}/>
+                        </td>
+                        <td>
+                            <input type="text" disabled={false}/>
+                        </td>
+                        <td>
+                            <input type="text" disabled={false}/>
+                        </td>
+                        <td>
+                            <input type="text" disabled={false}/>
+                        </td>
+                        <td>
+                            <input type="text" disabled={true}/>
+                        </td>
+                        <td>
+                            <input type="text" disabled={false}/>
+                        </td>
+                        <td>
+                            <input type="text" disabled={true}/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        )
+    }
+
+    tableInvoiceDetail = () => {
+        return (
+            <div style={{
+                width: '100vw',
+                overflowX: 'scroll',
+                textAlign: 'center',
+                alignContent: 'center',
+                justifyItems: 'center',
+            }}>
+                <table style={{
+                    borderCollapse: 'collapse',
+                    border: '1px solid black',
+                    alignContent: 'center',
+                    justifySelf: 'center',
+                    justifyContent: 'center',
+                    textAlign: 'center',
+                    margin: '0 auto',
+                    marginTop: '8rem'
+                }}>
+                    <tr>
+                        <td colSpan={11}>
+                            <h1>Invoice List Detail</h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Doc Received No</td>
+                        <td>PO NO</td>
+                        <td>Item</td>
+                        <td>Qty</td>
+                        <td>Amount DPP</td>
+                        <td>Other Amount</td>
+                        <td>PPN Amount</td>
+                        <td>PPH Prepaid</td>
+                        <td>PPH Payable</td>
+                        <td>Total Before Tax</td>
+                        <td>Total After Tax</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" disabled={false}/>
+                        </td>
+                        <td>
+                            <input type="date" disabled={false}/>
+                        </td>
+                        <td>
+                            <input type="text" disabled={false}/>
+                        </td>
+                        <td>
+                            <input type="text" disabled={false}/>
+                        </td>
+                        <td>
+                            <input type="text" disabled={false}/>
+                        </td>
+                        <td>
+                            <input type="text" disabled={true}/>
+                        </td>
+                        <td>
+                            <input type="text" disabled={true}/>
+                        </td>
+                        <td>
+                            <input type="text" disabled={true}/>
+                        </td>
+                        <td>
+                            <input type="text" disabled={false}/>
+                        </td>
+                        <td>
+                            <input type="text" disabled={false}/>
+                        </td>
+                        <td>
+                            <input type="text" disabled={false}/>
+                        </td>
+                    </tr>
+                </table>
+            </div>
         )
     }
 
@@ -193,7 +283,8 @@ class App extends Component {
         return (
             <>
                 {this.form()}
-                {this.table()}
+                {this.tableInvoice()}
+                {this.tableInvoiceDetail()}
             </>
         );
     }
